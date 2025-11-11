@@ -34,7 +34,14 @@ def choose_random_word(word_list):
 #   if we input the word="Ice Cream", the set will be {"i", "c", "e", "c", "r", "a", "m"}
 
 def initialize_letters_to_be_guessed(word):
-    ...
+    letters_set = set()
+    for char in word:
+        if char.isalpha():
+            letters_set.add(char.lower())
+
+
+    return letters_set
+
 
 
 # --- FUNCTION 4 ---
@@ -63,25 +70,25 @@ if __name__ == "__main__":
     # result = choose_random_word(test_words)
     # print(result)  # Expected: "onlyword"
 
-    ### --- Test Function 2: initialize_letters_to_be_guessed --- ###
-
-    ###Test 2.1###
+    # ### --- Test Function 2: initialize_letters_to_be_guessed --- ###
+    #
+    # ###Test 2.1###
     # result = initialize_letters_to_be_guessed("cat")
     # print(result)  # Expected: {"c", "a", "t"}
-
-    ###Test 2.2###
+    #
+    # ###Test 2.2###
     # result = initialize_letters_to_be_guessed("python")
     # print(result)  # Expected: {"p", "y", "t", "h", "o", "n"}
-
-    ###Test 2.3###
-    # result = initialize_letters_to_be_guessed("banana")
+    #
+    # ###Test 2.3###
+    # result = initialize_letters_to_be_guessed("banAna lotti")
     # print(result)  # Expected: {"b", "a", "n"} (note: no duplicates)
-
-    ###Test 2.4###
+    #
+    # ###Test 2.4###
     # result = initialize_letters_to_be_guessed("Armageddon")
     # print(result)  # Expected: {"a", "r", "m", "g", "e", "d", "o", "n"}
-
-    ###Test 2.5###
+    #
+    # ###Test 2.5###
     # result = initialize_letters_to_be_guessed("Ice Cream")
     # print(result)  # Expected: {"i", "c", "e", "r", "a", "m"} (no spaces)
 
