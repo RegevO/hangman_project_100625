@@ -1,0 +1,34 @@
+Complete the files from the hangman project.
+
+
+1) Branch out from main in your repo
+git branch BRANCH_NAME (to create a new branch)
+git switch
+
+      (to switch your HEAD to that new branch)
+
+2) copy one of the hangman files to your repo
+https://github.com/arieluchka-lectures/hangman_project_100625/tree/main/game_functions
+
+3) add and commit the newly added file
+git add ./game_functions/FILE_NAME.py
+git commit -m "YOUR MESSAGE HERE"
+
+4) start solving the functions, and commit your progress after every function.
+
+While file unsolved:
+    * Solve function *
+    git add ./game_functions/FILE_NAME.py
+    git commit -m "Added function XXX"
+
+5) After you completed the file, verify all is commited, switch back to main/master, and merge the branch.
+git status (to verify there are no changes (all is commited))
+git log (to verify you see all the commits you expect)
+
+git switch main/master
+git log (verify that main/master has no commits from the branch)
+
+git merge BRANCH_NAME (merge the finished branch back into main
+git log (Now we should see the new commits from the branch)
+
+6) Go back to "1)" and do it again for another file
